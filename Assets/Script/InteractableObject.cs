@@ -9,17 +9,24 @@ public class InteractableObject : CollidableObject
 
     protected override void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if(collision != null)
         {
-            ButtonPrefab.SetActive(true);
+            if (collision.gameObject.tag == "Player")
+            {
+                ButtonPrefab.SetActive(true);
+            }
         }
+        
     }
 
     protected override void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if(collision != null)
         {
-            ButtonPrefab.SetActive(false);
+            if (collision.gameObject.tag == "Player")
+            {
+                ButtonPrefab.SetActive(false);
+            }
         }
     }
 }
