@@ -330,7 +330,7 @@ GameObject:
   - component: {fileID: 372034252}
   - component: {fileID: 372034251}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: camera2
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -820,7 +820,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 643ced46d4eb02249b104011bcfb032a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vcam: {fileID: 0}
 --- !u!61 &715019429
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1386,7 +1385,7 @@ GameObject:
   - component: {fileID: 1285427731}
   - component: {fileID: 1285427733}
   m_Layer: 0
-  m_Name: Virtual Camera
+  m_Name: Vcam2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

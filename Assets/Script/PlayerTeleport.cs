@@ -1,102 +1,44 @@
 using UnityEngine;
 using Cinemachine;
-
 public class PlayerTeleport : MonoBehaviour
 {
     private GameObject currentTeleporter;
-    private GameObject mapBound;
-    private CinemachineConfiner2D confiner;
-    public CinemachineVirtualCamera vcam;
-    private PolygonCollider2D tempBound;
+    public CinemachineVirtualCamera vcam1;
+    public CinemachineVirtualCamera vcam2;
+    public PolygonCollider2D map1Bounds;
+    public PolygonCollider2D map2Bounds;
 
-    private bool teleportStatus;
-    private GameObject destinationBound;
+    private CinemachineConfiner2D confiner1;
+    private CinemachineConfiner2D confiner2;
+
 
     private void Start()
     {
-        teleportStatus = false;
+        // Initialize the cameras and bounds as needed
+        if (vcam1 != null && vcam2 != null && map1Bounds != null && map2Bounds != null)
+        {
+            vcam1.gameObject.SetActive(true);
+            vcam2.gameObject.SetActive(false);
+
+            // Cache CinemachineConfiner2D components
+            confiner1 = vcam1.GetComponent<CinemachineConfiner2D>();
+            confiner2 = vcam2.GetComponent<CinemachineConfiner2D>();
+
+            // Set the initial bounding shape
+            confiner1.m_BoundingShape2D = map1Bounds;
+        }
+        
     }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
             if (currentTeleporter != null)
             {
-
-                // set before teleport bound to disable
-                SetBound();
-                // set destination to disable
-                //destinationBound = FindChildWithTag(currentTeleporter.GetComponent<Teleporter>().GetDestination().parent.gameObject, "Bound");
-                //Debug.Log(destinationBound.name);
-                //destinationBound.GetComponent<PolygonCollider2D>().enabled = false;
-                //Debug.Log(destinationBound.GetComponent<PolygonCollider2D>().isActiveAndEnabled);
-
-                //Debug.Log(currentTeleporter.GetComponent<Teleporter>().GetDestination().transform.parent.gameObject.name);
-
-                if (teleportStatus == true)
-                {
-                    transform.position = CheckpointManager.checkpoint.position;
-                    //Debug.Log("Back to : " + CheckpointManager.checkpoint.position);
-                    teleportStatus = false;
-                }
-                else if (teleportStatus == false)
-                {
-
-                    CheckpointManager.checkpoint = transform;
-                    //Debug.Log("Save Check point! : " + CheckpointManager.checkpoint.position);
-
-                    // teleport
-                    transform.position = currentTeleporter.GetComponent<Teleporter>().GetDestination().position;
-
-                    teleportStatus = true;
-                }
-
-                //tempBound.enabled = true;
-                //SetBound();
-
-                //// set before teleport bound to enable
-                //if (tempBound != null)
-                //{
-                //    tempBound.enabled = true;
-                //}
-
-                // set after teleport bound to camera
-                //GetComponent<Player>().SetBoundToCamera();
-
+                transform.position = currentTeleporter.GetComponent<Teleporter>().GetDestination().position;
+                SwitchCameras();
             }
-        }
-    }
-
-    GameObject FindChildWithTag(GameObject parent, string tag)
-    {
-        
-        GameObject child = null;
-
-        foreach (Transform transform in parent.transform)
-        {
-            if (transform.CompareTag(tag))
-            {
-                child = transform.gameObject;
-                break;
-            }
-        }
-
-        return child;
-    }
-
-    void SetBound()
-    {
-        mapBound = this.gameObject.GetComponent<Player>().bound;
-        PolygonCollider2D bound = mapBound.GetComponent<PolygonCollider2D>();
-        tempBound = bound;
-
-        if (bound.enabled == true) // if bound is eneble then set to disable
-        {
-            bound.enabled = false;
-        }
-        else // if bound is disable then set to enable
-        {
-            bound.enabled = true;
         }
     }
 
@@ -105,7 +47,6 @@ public class PlayerTeleport : MonoBehaviour
         if (collision.CompareTag("Teleporter"))
         {
             currentTeleporter = collision.gameObject;
-
         }
     }
 
@@ -117,6 +58,22 @@ public class PlayerTeleport : MonoBehaviour
             {
                 currentTeleporter = null;
             }
+        }
+    }
+    private void SwitchCameras()
+    {
+        // Switch between cameras
+        vcam1.gameObject.SetActive(!vcam1.gameObject.activeSelf);
+        vcam2.gameObject.SetActive(!vcam2.gameObject.activeSelf);
+
+        // Change Bounding Shape 2D based on the active camera
+        if (vcam1.gameObject.activeSelf)
+        {
+            confiner1.m_BoundingShape2D = map1Bounds;
+        }
+        else
+        {
+            confiner2.m_BoundingShape2D = map2Bounds;
         }
     }
 }
