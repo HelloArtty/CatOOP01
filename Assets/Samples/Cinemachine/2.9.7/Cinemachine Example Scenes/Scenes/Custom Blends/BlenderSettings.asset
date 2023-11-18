@@ -24,8 +24,8 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-  - m_From: '**ANY CAMERA**'
-    m_To: THEN TURN ME ON CM_2
+  - m_From: vcam1
+    m_To: vcam2
     m_Blend:
       m_Style: 0
       m_Time: 2
