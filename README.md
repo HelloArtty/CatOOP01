@@ -3,3 +3,5 @@
 หิวข้าวมาก
 
 same
+
+fix camera
