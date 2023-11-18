@@ -7,3 +7,5 @@ same
 fix camera
 
 pull test
+
+push test
