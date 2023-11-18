@@ -5,15 +5,15 @@ using UnityEngine;
 public class InteractableObject : CollidableObject
 {
 
-    [SerializeField] private GameObject ButtonPrefab;
+    [SerializeField] protected GameObject buttonPrefab;
 
     protected override void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision != null)
         {
-            if (collision.gameObject.tag == "Player")
+            if (collision.CompareTag("Player"))
             {
-                ButtonPrefab.SetActive(true);
+                buttonPrefab.SetActive(true);
             }
         }
         
@@ -23,9 +23,9 @@ public class InteractableObject : CollidableObject
     {
         if(collision != null)
         {
-            if (collision.gameObject.tag == "Player")
+            if (collision.CompareTag("Player"))
             {
-                ButtonPrefab.SetActive(false);
+                buttonPrefab.SetActive(false);
             }
         }
     }
