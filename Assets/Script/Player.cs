@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class Player : MonoBehaviour
 {
@@ -21,16 +22,19 @@ public class Player : MonoBehaviour
     bool facingRight = true;
     bool jump;
 
+    public GameObject bound;
+    //public CinemachineVirtualCamera vcam;
+    CinemachineConfiner2D confiner2D;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        confiner2D = GetComponent<CinemachineConfiner2D>();
     }
-    
+
     void Update()
     {
-
-
         horizontalValue = Input.GetAxisRaw("Horizontal");
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
@@ -52,6 +56,7 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
+        GetBound();
         GroundCheck();
         Move(horizontalValue, jump);
     }
@@ -100,5 +105,18 @@ public class Player : MonoBehaviour
 
         animator.SetFloat("xVelocity", Mathf.Abs(rb.velocity.x));
         #endregion
+    }
+
+    private void GetBound()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.up);
+        if (hit.collider != null)
+        {
+            if (hit.collider.tag == "Bound")
+            {
+                bound = hit.collider.gameObject;
+
+            }
+        }
     }
 }
