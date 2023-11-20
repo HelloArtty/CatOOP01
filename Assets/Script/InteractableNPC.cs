@@ -19,7 +19,7 @@ public class InteractableNPC : InteractableObject
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (playerInCollider == true)
+            if (playerInCollider == true && dialogueManager.isDialogueFinished == true)
             {
                 if (dialogueStatus == false)
                 {

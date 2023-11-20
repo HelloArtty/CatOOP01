@@ -17,26 +17,30 @@ public class DialogueManager : MonoBehaviour
 
     [SerializeField] private int npcIndex = 0;
     [SerializeField] private int dialogueLength;
-    private InteractableNPC interactableObject;
+    private InteractableNPC interactableNPC;
+    public bool isDialogueFinished;
 
     private void Start(){
-        interactableObject = GetComponent<InteractableNPC>();
+        interactableNPC = GetComponent<InteractableNPC>();
         StartDialogue();
         dialogueLength = npcDialogueSentences.Length;
+        isDialogueFinished = true;
     }
 
     private IEnumerator TypeNPCDialogue()
     {
+        isDialogueFinished = false;
         npcDialogueText.text = "";
         foreach(char letter in npcDialogueSentences[npcIndex].ToCharArray())
         {
             npcDialogueText.text += letter;
             yield return new WaitForSeconds(typingSpeed);
         }
+        isDialogueFinished = true;
     }
 
     public void StartDialogue(){
-        interactableObject.dialogueStatus = true;
+        interactableNPC.dialogueStatus = true;
         if(npcIndex < dialogueLength)
         {
             StartCoroutine(TypeNPCDialogue());
@@ -45,7 +49,7 @@ public class DialogueManager : MonoBehaviour
         else
         {
             npcIndex = 0;
-            interactableObject.dialogueStatus = false;
+            interactableNPC.dialogueStatus = false;
             bubbleDialogue.SetActive(false);
         }
     }
@@ -59,7 +63,7 @@ public class DialogueManager : MonoBehaviour
         else
         {
             npcIndex = 0;
-            interactableObject.dialogueStatus = false;
+            interactableNPC.dialogueStatus = false;
             bubbleDialogue.SetActive(false);
         }
     }
