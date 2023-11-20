@@ -9,22 +9,27 @@ public class DialogueManager : MonoBehaviour
 {
     [SerializeField] private float typingSpeed = 0.05f;
 
-    [SerializeField] private GameObject bubbleDialogue;
+    [SerializeField] private GameObject dialogueBubble;
     [SerializeField] private TextMeshProUGUI npcDialogueText;
     
     [TextArea]
     [SerializeField] private string[] npcDialogueSentences;
 
-    [SerializeField] private int npcIndex = 0;
-    [SerializeField] private int dialogueLength;
+    private int npcIndex = 0;
+    private int dialogueLength;
     private InteractableNPC interactableNPC;
+
+    [HideInInspector]
     public bool isDialogueFinished;
+    [HideInInspector]
+    public bool isDialogueEnded;
 
     private void Start(){
         interactableNPC = GetComponent<InteractableNPC>();
         StartDialogue();
         dialogueLength = npcDialogueSentences.Length;
         isDialogueFinished = true;
+        isDialogueEnded = true;
     }
 
     private IEnumerator TypeNPCDialogue()
@@ -41,6 +46,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(){
         interactableNPC.dialogueStatus = true;
+        isDialogueEnded = false;
         if(npcIndex < dialogueLength)
         {
             StartCoroutine(TypeNPCDialogue());
@@ -48,9 +54,7 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            npcIndex = 0;
-            interactableNPC.dialogueStatus = false;
-            bubbleDialogue.SetActive(false);
+            EndDialogue();
         }
     }
 
@@ -62,9 +66,14 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            npcIndex = 0;
-            interactableNPC.dialogueStatus = false;
-            bubbleDialogue.SetActive(false);
+            EndDialogue();
         }
+    }
+
+    private void EndDialogue(){
+        npcIndex = 0;
+        interactableNPC.dialogueStatus = false;
+        isDialogueEnded = true;
+        dialogueBubble.SetActive(false);
     }
 }
