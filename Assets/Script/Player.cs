@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     Animator animator;
     public Transform groundCheckCollider;
     public LayerMask groundLayer;
+    public VectorValue startingPosition;
 
     const float groundCheckRadius = 0.2f;
     [SerializeField] float speed = 1;
@@ -26,6 +27,10 @@ public class Player : MonoBehaviour
     //public CinemachineVirtualCamera vcam;
     CinemachineConfiner2D confiner2D;
 
+    void Start()
+    {
+        transform.position = startingPosition.initialValue;
+    }
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
