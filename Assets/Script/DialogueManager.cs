@@ -8,6 +8,7 @@ using System;
 public class DialogueManager : MonoBehaviour
 {
     [SerializeField] private float typingSpeed = 0.05f;
+    [SerializeField] private float dialogueCloseSec = 4.0f;
 
     [SerializeField] private GameObject dialogueBubble;
     [SerializeField] private TextMeshProUGUI npcDialogueText;
@@ -15,14 +16,12 @@ public class DialogueManager : MonoBehaviour
     [TextArea]
     [SerializeField] private string[] npcDialogueSentences;
 
-    private int npcIndex = 0;
-    private int dialogueLength;
+    [SerializeField] private int npcIndex = 0;
+    [SerializeField] private int dialogueLength;
     private InteractableNPC interactableNPC;
 
-    [HideInInspector]
-    public bool isDialogueFinished;
-    [HideInInspector]
-    public bool isDialogueEnded;
+    [HideInInspector] public bool isDialogueFinished;
+    [HideInInspector] public bool isDialogueEnded;
 
     private void Start(){
         interactableNPC = GetComponent<InteractableNPC>();
@@ -44,6 +43,11 @@ public class DialogueManager : MonoBehaviour
         isDialogueFinished = true;
     }
 
+    private IEnumerator CloseDialogue(){
+        yield return new WaitForSeconds(dialogueCloseSec);
+        EndDialogue();
+    }
+
     public void StartDialogue(){
         interactableNPC.dialogueStatus = true;
         isDialogueEnded = false;
@@ -51,6 +55,10 @@ public class DialogueManager : MonoBehaviour
         {
             StartCoroutine(TypeNPCDialogue());
             npcIndex += 1;
+            if(npcIndex == dialogueLength)
+            {
+                StartCoroutine(CloseDialogue());
+            }
         }
         else
         {
@@ -63,7 +71,11 @@ public class DialogueManager : MonoBehaviour
         {
             StartCoroutine(TypeNPCDialogue());
             npcIndex += 1;
-        }
+            if(npcIndex == dialogueLength)
+            {
+                StartCoroutine(CloseDialogue());
+            }
+        }   
         else
         {
             EndDialogue();
