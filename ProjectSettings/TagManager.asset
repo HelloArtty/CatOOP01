@@ -7,18 +7,20 @@ TagManager:
   - Ground
   - Teleporter
   - Bound
-  - Interact
+  - Default
+  - TransparentFX
+  - Ignore Raycast
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
-  - Ground
   - Player
-  - OneWayPlatform
-  - Interact
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -44,16 +46,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Back
-    uniqueID: 1313109529
-    locked: 0
-  - name: Entity
-    uniqueID: 313303639
-    locked: 0
-  - name: Fore
-    uniqueID: 1425339609
-    locked: 0
-  - name: Player
-    uniqueID: 3572738893
     locked: 0

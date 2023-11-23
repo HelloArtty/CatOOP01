@@ -1910,7 +1910,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 313303639
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3826,7 +3826,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScenesLoad: 2
-  playerPosition: {x: -0.16, y: -2.2}
+  playerPosition: {x: -11.5, y: -5.2}
   playerStorage: {fileID: 11400000, guid: 105e743315230c14682549e9633da3b9, type: 2}
   fadeInPanel: {fileID: 7021883824133332499, guid: 66a0196afb462214f9ca6faf383a1167, type: 3}
   fadeOutPanel: {fileID: 7204978260173880769, guid: 9de978379ac615941955aaabc88a6ac1, type: 3}
@@ -4037,7 +4037,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -722228403
-  m_SortingLayer: 4
+  m_SortingLayer: 0
   m_SortingOrder: 5
   m_Sprite: {fileID: -2035485150, guid: 4743fb5f7eb8e4699a7fc5ae731da224, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4508,7 +4508,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 313303639
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
