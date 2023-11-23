@@ -62,42 +62,38 @@ AnimationClip:
       value: {fileID: 783669149, guid: 18219aa284b788747be121329395a0a5, type: 3}
     - time: 2.5833333
       value: {fileID: -676696049, guid: 18219aa284b788747be121329395a0a5, type: 3}
-    - time: 2.6666667
-      value: {fileID: 783669149, guid: 18219aa284b788747be121329395a0a5, type: 3}
-    - time: 2.8333333
-      value: {fileID: 77355957, guid: 18219aa284b788747be121329395a0a5, type: 3}
-    - time: 2.9166667
-      value: {fileID: 2049464450, guid: 18219aa284b788747be121329395a0a5, type: 3}
-    - time: 3.1
+    - time: 2.8666666
       value: {fileID: -943542544, guid: 18219aa284b788747be121329395a0a5, type: 3}
-    - time: 3.1833334
+    - time: 2.95
       value: {fileID: -464869417, guid: 18219aa284b788747be121329395a0a5, type: 3}
-    - time: 3.35
+    - time: 3.1166666
       value: {fileID: -137547759, guid: 18219aa284b788747be121329395a0a5, type: 3}
-    - time: 3.45
+    - time: 3.2166667
       value: {fileID: -1209266214, guid: 18219aa284b788747be121329395a0a5, type: 3}
-    - time: 3.5166667
+    - time: 3.2833333
       value: {fileID: 1656548104, guid: 18219aa284b788747be121329395a0a5, type: 3}
-    - time: 3.7
+    - time: 3.4666667
       value: {fileID: 361907521, guid: 18219aa284b788747be121329395a0a5, type: 3}
-    - time: 3.7666667
+    - time: 3.5333333
       value: {fileID: -1909405600, guid: 18219aa284b788747be121329395a0a5, type: 3}
-    - time: 3.95
+    - time: 3.7166667
       value: {fileID: -1970771901, guid: 18219aa284b788747be121329395a0a5, type: 3}
-    - time: 4.116667
+    - time: 3.8833334
       value: {fileID: -1382115465, guid: e95e0487b3b9dc744a33314e8ab4a312, type: 3}
-    - time: 4.2
+    - time: 3.9666667
       value: {fileID: -820635256, guid: e95e0487b3b9dc744a33314e8ab4a312, type: 3}
-    - time: 4.383333
+    - time: 4.15
       value: {fileID: -1571689326, guid: e95e0487b3b9dc744a33314e8ab4a312, type: 3}
-    - time: 4.4666667
+    - time: 4.233333
       value: {fileID: -345083790, guid: e95e0487b3b9dc744a33314e8ab4a312, type: 3}
-    - time: 4.633333
+    - time: 4.4
       value: {fileID: -1940853953, guid: e95e0487b3b9dc744a33314e8ab4a312, type: 3}
-    - time: 4.766667
+    - time: 4.5333333
       value: {fileID: 1432530257, guid: e95e0487b3b9dc744a33314e8ab4a312, type: 3}
-    - time: 4.883333
-      value: {fileID: 1223987923, guid: e95e0487b3b9dc744a33314e8ab4a312, type: 3}
+    - time: 4.616667
+      value: {fileID: 1432530257, guid: e95e0487b3b9dc744a33314e8ab4a312, type: 3}
+    - time: 4.85
+      value: {fileID: 1750684531, guid: e95e0487b3b9dc744a33314e8ab4a312, type: 3}
     - time: 14.65
       value: {fileID: 1750684531, guid: e95e0487b3b9dc744a33314e8ab4a312, type: 3}
     attribute: m_Sprite
@@ -143,9 +139,6 @@ AnimationClip:
     - {fileID: 77355957, guid: 18219aa284b788747be121329395a0a5, type: 3}
     - {fileID: 783669149, guid: 18219aa284b788747be121329395a0a5, type: 3}
     - {fileID: -676696049, guid: 18219aa284b788747be121329395a0a5, type: 3}
-    - {fileID: 783669149, guid: 18219aa284b788747be121329395a0a5, type: 3}
-    - {fileID: 77355957, guid: 18219aa284b788747be121329395a0a5, type: 3}
-    - {fileID: 2049464450, guid: 18219aa284b788747be121329395a0a5, type: 3}
     - {fileID: -943542544, guid: 18219aa284b788747be121329395a0a5, type: 3}
     - {fileID: -464869417, guid: 18219aa284b788747be121329395a0a5, type: 3}
     - {fileID: -137547759, guid: 18219aa284b788747be121329395a0a5, type: 3}
@@ -160,7 +153,8 @@ AnimationClip:
     - {fileID: -345083790, guid: e95e0487b3b9dc744a33314e8ab4a312, type: 3}
     - {fileID: -1940853953, guid: e95e0487b3b9dc744a33314e8ab4a312, type: 3}
     - {fileID: 1432530257, guid: e95e0487b3b9dc744a33314e8ab4a312, type: 3}
-    - {fileID: 1223987923, guid: e95e0487b3b9dc744a33314e8ab4a312, type: 3}
+    - {fileID: 1432530257, guid: e95e0487b3b9dc744a33314e8ab4a312, type: 3}
+    - {fileID: 1750684531, guid: e95e0487b3b9dc744a33314e8ab4a312, type: 3}
     - {fileID: 1750684531, guid: e95e0487b3b9dc744a33314e8ab4a312, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
