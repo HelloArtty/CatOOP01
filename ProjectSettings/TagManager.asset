@@ -44,6 +44,21 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BG
+    uniqueID: 1661901801
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Arts
+    uniqueID: 45119859
+    locked: 0
+  - name: NPC
+    uniqueID: 2939465027
+    locked: 0
+  - name: Path
+    uniqueID: 3063187959
+    locked: 0
+  - name: Player
+    uniqueID: 3386852417
     locked: 0
