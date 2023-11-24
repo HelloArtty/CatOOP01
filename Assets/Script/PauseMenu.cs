@@ -6,18 +6,39 @@ using UnityEngine.UI;
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] private Button button;
+    [SerializeField] private Button resume;
     [SerializeField] private GameObject menuScreen;
+    private Canvas[] allCanvases; // Get all Canvas components in the scene
+    private int canvasIndexCheck = 1;
     void Start(){
-        button.onClick.AddListener(TaskOnClick);
+        allCanvases = FindObjectsOfType<Canvas>();
+        button.onClick.AddListener(OpenPauseMenu);
+        resume.onClick.AddListener(OpenPauseMenu);
     }
 
-    void Update(){
-        if(Input.GetKeyDown(KeyCode.Escape)){
-            SetMenuStatus();
+    // void Update(){
+    //     if(Input.GetKeyDown(KeyCode.Escape)){
+    //         checkOpenCanvas();
+    //     }
+    // }
+
+    void OpenPauseMenu(){
+        SetMenuStatus();
+    }
+
+    void ClickedResume(){
+        SetMenuStatus();
+    }
+
+    void checkOpenCanvas(){ 
+        foreach (Canvas canvas in allCanvases)
+        {
+            if (canvas != null && canvas.isActiveAndEnabled && canvas.sortingOrder != 0) // not working
+            {
+                Debug.Log(canvas.transform.parent.name);
+                return;
+            }
         }
-    }
-
-    void TaskOnClick(){
         SetMenuStatus();
     }
 
