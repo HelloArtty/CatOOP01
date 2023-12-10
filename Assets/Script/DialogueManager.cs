@@ -8,24 +8,23 @@ using System;
 public class DialogueManager : MonoBehaviour
 {
     [SerializeField] private float typingSpeed = 0.05f;
-    [SerializeField] private float dialogueCloseSec = 4.0f;
+    [SerializeField] private float dialogueCloseSec = 3.0f;
 
-    [SerializeField] private GameObject dialogueBubble;
-    [SerializeField] private TextMeshProUGUI npcDialogueText;
+    [SerializeField] protected GameObject dialogueBubble;
+    [SerializeField] protected TextMeshProUGUI npcDialogueText;
     
     [TextArea]
-    [SerializeField] private string[] npcDialogueSentences;
+    [SerializeField] protected string[] npcDialogueSentences;
 
-    [SerializeField] private int npcIndex = 0;
-    [SerializeField] private int dialogueLength;
-    private InteractableNPC interactableNPC;
+    [SerializeField] protected int npcIndex = 0;
+    [SerializeField] protected int dialogueLength;
+    protected InteractableNPC interactableNPC;
 
     [HideInInspector] public bool isDialogueFinished;
     [HideInInspector] public bool isDialogueEnded;
 
     private void Start(){
         interactableNPC = GetComponent<InteractableNPC>();
-        StartDialogue();
         dialogueLength = npcDialogueSentences.Length;
         isDialogueFinished = true;
         isDialogueEnded = true;
@@ -49,6 +48,7 @@ public class DialogueManager : MonoBehaviour
     }
 
     public void StartDialogue(){
+        dialogueLength = npcDialogueSentences.Length;
         interactableNPC.dialogueStatus = true;
         isDialogueEnded = false;
         if(npcIndex < dialogueLength)
@@ -82,7 +82,7 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    private void EndDialogue(){
+    protected virtual void EndDialogue(){
         npcIndex = 0;
         interactableNPC.dialogueStatus = false;
         isDialogueEnded = true;

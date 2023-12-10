@@ -409,9 +409,9 @@ GameObject:
   - component: {fileID: 474901820}
   - component: {fileID: 474901822}
   - component: {fileID: 474901821}
-  - component: {fileID: 474901823}
   - component: {fileID: 474901825}
   - component: {fileID: 474901824}
+  - component: {fileID: 474901826}
   m_Layer: 0
   m_Name: OwlNPC
   m_TagString: Untagged
@@ -496,29 +496,6 @@ MonoBehaviour:
   interactSymbol: {fileID: 2070426355}
   dialogueBubble: {fileID: 77030707}
   dialogueStatus: 0
---- !u!114 &474901823
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 474901819}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3855bde23b8b494c93b9a3443169a93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  typingSpeed: 0.05
-  dialogueCloseSec: 4
-  dialogueBubble: {fileID: 77030707}
-  npcDialogueText: {fileID: 1227965841}
-  npcDialogueSentences:
-  - Hey, could you find the item and send it for your first task?
-  - Good luck :)
-  npcIndex: 0
-  dialogueLength: 0
-  isDialogueFinished: 0
-  isDialogueEnded: 0
 --- !u!114 &474901824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -548,7 +525,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questInfoForPoint: {fileID: 11400000, guid: c6fadb4d06d9abf4aa13a7367bfe1e98, type: 2}
   startPoint: 1
-  finishPoint: 1
+  finishPoint: 0
+--- !u!114 &474901826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474901819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba7aad33ed62eeb4aa3854a446357ff5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typingSpeed: 0.05
+  dialogueCloseSec: 4
+  dialogueBubble: {fileID: 77030707}
+  npcDialogueText: {fileID: 1227965841}
+  npcDialogueSentences: []
+  npcIndex: 0
+  dialogueLength: 0
+  isDialogueFinished: 0
+  isDialogueEnded: 0
+  info: {fileID: 11400000, guid: c6fadb4d06d9abf4aa13a7367bfe1e98, type: 2}
+  npcDialogueSentencesCanStart:
+  - Hey there! Welcome aboard as our newest postman.
+  - Your first task is to capture pictures of specific items on this list and deliver
+    them to the receiver's hands.
+  - You can check the list of tasks you need to complete at the top left corner of
+    your screen.
+  - Feel free to explore the area to locate the items, and don't forget to snap those
+    pictures before delivery!
+  - Good luck!
+  npcDialogueSentencesInProgress: []
+  npcDialogueSentencesCanFinish: []
+  npcDialogueSentencesFinished:
+  - Congratulations! You've completed all the tasks.
+  - Thankyou for playing.
 --- !u!1 &487906684
 GameObject:
   m_ObjectHideFlags: 0
@@ -632,11 +645,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 455716198736383969, guid: 1a24446e857894aa9a9cd731437a8961, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.1278572
+      value: 1.5104
       objectReference: {fileID: 0}
     - target: {fileID: 455716198736383969, guid: 1a24446e857894aa9a9cd731437a8961, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5313072
+      value: 0.692
       objectReference: {fileID: 0}
     - target: {fileID: 455716198736383969, guid: 1a24446e857894aa9a9cd731437a8961, type: 3}
       propertyPath: m_LocalPosition.z
@@ -670,8 +683,68 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6373890586629282183, guid: 1a24446e857894aa9a9cd731437a8961, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1.9716
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373890586629282183, guid: 1a24446e857894aa9a9cd731437a8961, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0.8066
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373890586629282183, guid: 1a24446e857894aa9a9cd731437a8961, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.000014961
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373890586629282183, guid: 1a24446e857894aa9a9cd731437a8961, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.000000074506
+      objectReference: {fileID: 0}
+    - target: {fileID: 6715470652484713594, guid: 1a24446e857894aa9a9cd731437a8961, type: 3}
+      propertyPath: m_fontSize
+      value: 0.16
+      objectReference: {fileID: 0}
     - target: {fileID: 6715470652484713594, guid: 1a24446e857894aa9a9cd731437a8961, type: 3}
       propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6715470652484713594, guid: 1a24446e857894aa9a9cd731437a8961, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6715470652484713594, guid: 1a24446e857894aa9a9cd731437a8961, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110985204649240936, guid: 1a24446e857894aa9a9cd731437a8961, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1.9716
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110985204649240936, guid: 1a24446e857894aa9a9cd731437a8961, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0.8066
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110985204649240936, guid: 1a24446e857894aa9a9cd731437a8961, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.006
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110985204649240936, guid: 1a24446e857894aa9a9cd731437a8961, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.023
+      objectReference: {fileID: 0}
+    - target: {fileID: 8881333139903115339, guid: 1a24446e857894aa9a9cd731437a8961, type: 3}
+      propertyPath: m_Size.x
+      value: 1.4859297
+      objectReference: {fileID: 0}
+    - target: {fileID: 8881333139903115339, guid: 1a24446e857894aa9a9cd731437a8961, type: 3}
+      propertyPath: m_Size.y
+      value: 1.2717575
+      objectReference: {fileID: 0}
+    - target: {fileID: 8881333139903115339, guid: 1a24446e857894aa9a9cd731437a8961, type: 3}
+      propertyPath: m_RendererPriority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8881333139903115339, guid: 1a24446e857894aa9a9cd731437a8961, type: 3}
+      propertyPath: m_RenderingLayerMask
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1319,6 +1392,92 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!1 &1199805826
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1199805830}
+  - component: {fileID: 1199805829}
+  - component: {fileID: 1199805827}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1199805827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199805826}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3855bde23b8b494c93b9a3443169a93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typingSpeed: 0.05
+  dialogueCloseSec: 4
+  dialogueBubble: {fileID: 77030707}
+  npcDialogueText: {fileID: 1227965841}
+  npcDialogueSentences:
+  - Hey
+  - hello
+  npcIndex: 0
+  dialogueLength: 0
+  isDialogueFinished: 0
+  isDialogueEnded: 0
+--- !u!114 &1199805829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199805826}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 994dadfccd51de8468cc5cf6ebf1571c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typingSpeed: 0.05
+  dialogueCloseSec: 4
+  dialogueBubble: {fileID: 77030707}
+  npcDialogueText: {fileID: 1227965841}
+  npcDialogueSentences: []
+  npcIndex: 0
+  dialogueLength: 0
+  isDialogueFinished: 0
+  isDialogueEnded: 0
+  info: {fileID: 11400000, guid: c6fadb4d06d9abf4aa13a7367bfe1e98, type: 2}
+  npcDialogueSentencesCanStart:
+  - Find Mochi For Me!
+  npcDialogueSentencesInProgress:
+  - Can't find? susu na
+  npcDialogueSentencesCanFinish:
+  - Go to deliver to black cat in the town!
+  npcDialogueSentencesFinished:
+  - Thankyou for playing!
+--- !u!4 &1199805830
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199805826}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.232069, y: -1.7969328, z: -8.932864}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1227965841 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6715470652484713594, guid: 1a24446e857894aa9a9cd731437a8961, type: 3}
@@ -1551,10 +1710,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3858786861682554644, guid: 00687570a5cebb749a883d7416061fac, type: 3}
-      propertyPath: loadQuestState
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8522592213224412082, guid: 00687570a5cebb749a883d7416061fac, type: 3}
       propertyPath: m_Name
       value: Manager
@@ -1727,3 +1882,4 @@ SceneRoots:
   - {fileID: 134635575}
   - {fileID: 1147260569}
   - {fileID: 1896130559}
+  - {fileID: 1199805830}

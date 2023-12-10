@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Xml.Serialization;
 using UnityEngine;
 
+// [ExecuteInEditMode]
+// [ScriptExecutionOrder(-1000)]
 public class QuestManager : MonoBehaviour
 {
     [Header("Config")]
@@ -52,8 +54,8 @@ public class QuestManager : MonoBehaviour
     {
         Quest quest = GetQuestByID(id);
         quest.state = state;
-        Debug.Log("Change State for quest: " + quest.info.id + " State: " + quest.state);
         GameEventManager.instance.questEvents.QuestStateChange(quest);
+        Debug.Log("Change State for quest: " + quest.info.id + " State: " + quest.state);
     }
 
     private bool CheckRequirementsMet(Quest quest)
@@ -84,7 +86,6 @@ public class QuestManager : MonoBehaviour
     {
         Quest quest = GetQuestByID(id);
         quest.InstantiateCurrentQuestStep(this.transform);
-        // Debug.Log("Start quest: " + quest.info.id);
         ChangeQuestState(quest.info.id, QuestState.IN_PROGRESS);
     }
 
@@ -167,7 +168,7 @@ public class QuestManager : MonoBehaviour
             string serializedData = JsonUtility.ToJson(questData);
             PlayerPrefs.SetString(quest.info.id, serializedData);
 
-            Debug.Log(serializedData);
+            // Debug.Log(serializedData);
         }
         catch(System.Exception e)
         {
@@ -187,7 +188,6 @@ public class QuestManager : MonoBehaviour
                 QuestData questData = JsonUtility.FromJson<QuestData>(serializedData);
                 
                 quest = new Quest(questInfo, questData.state, questData.questStepIndex, questData.questStepStates);
-                Debug.Log("Load Quest: " + quest.info.id + " State: " + quest.state);
             }
             // etherwise, initialize a new quest
             else

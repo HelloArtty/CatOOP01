@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using System.Threading;
+using System;
 
 // require boxcollider2D on the gameobject that this script attact to
 [RequireComponent(typeof(BoxCollider2D))]
@@ -13,6 +15,8 @@ public class QuestPoint : MonoBehaviour
     [Header("Config")]
     [SerializeField] private bool startPoint = true;
     [SerializeField] private bool finishPoint = true;
+    private ManualResetEvent dialogueEndedEvent = new ManualResetEvent(false);
+    // public event EventHandler StartQuestRequested;
 
     private bool playerIsNear = false;
     private string questID;
@@ -40,15 +44,23 @@ public class QuestPoint : MonoBehaviour
         {
             return;
         }
-        // what to do when press submit at questpoint
-        if(currentQuestState.Equals(QuestState.CAN_START) && startPoint)
+
+        if (currentQuestState.Equals(QuestState.CAN_START) && startPoint)
         {
-            GameEventManager.instance.questEvents.StartQuest(questID);
+            StartCoroutine(StartQuestIfReady());
         }
         else if(currentQuestState.Equals(QuestState.CAN_FINISH) && finishPoint)
         {
             GameEventManager.instance.questEvents.FinishQuest(questID);
         }
+    }
+
+    public IEnumerator StartQuestIfReady()
+    {
+        yield return StartCoroutine(GetComponent<DialogueQuestManager>().CheckIfReadyToStart());
+
+        // This line will execute only after CheckIfReadyToStart completes
+        GameEventManager.instance.questEvents.StartQuest(questID);
     }
 
     private void QuestStateChange(Quest quest)
@@ -59,6 +71,8 @@ public class QuestPoint : MonoBehaviour
             currentQuestState = quest.state;
         }
     }
+
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Player"))
@@ -74,4 +88,5 @@ public class QuestPoint : MonoBehaviour
             playerIsNear = false;
         }
     }
+
 }

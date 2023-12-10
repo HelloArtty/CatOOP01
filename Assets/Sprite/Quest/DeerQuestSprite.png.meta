@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 394446c0fca6b4738aa4addf99d0e392
+guid: 746398ff2e366584fa6508b006804aaa
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,12 +110,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: QuestItem_0
+      name: DeerQuestSprite 1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 22
+        width: 17
         height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -124,19 +124,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0171040fb25e05043bb0b25ab5fdf032
-      internalID: 584920647
+      spriteID: 2913b6996d4432743b355adc2d8084b9
+      internalID: 640185953
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: QuestItem_1
+      name: DeerQuestSprite 1_1
       rect:
         serializedVersion: 2
-        x: 22
+        x: 17
         y: 0
-        width: 22
+        width: 17
         height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -145,19 +145,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4669586cf02deca45a6694501ca6bd06
-      internalID: 1633995251
+      spriteID: cbf59ad80c6a0364da4339beb9cf969e
+      internalID: 1531072678
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: QuestItem_2
+      name: DeerQuestSprite 1_2
       rect:
         serializedVersion: 2
-        x: 44
+        x: 34
         y: 0
-        width: 22
+        width: 17
         height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -166,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e94d10509779ee94ba77abf355cc6bd2
-      internalID: 818765101
+      spriteID: ab2dfb4dd6292f547a5bafdab52f827a
+      internalID: -6299009
       vertices: []
       indices: 
       edges: []
@@ -183,9 +183,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      QuestItem_0: 584920647
-      QuestItem_1: 1633995251
-      QuestItem_2: 818765101
+      DeerQuestSprite 1_0: 640185953
+      DeerQuestSprite 1_1: 1531072678
+      DeerQuestSprite 1_2: -6299009
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

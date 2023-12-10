@@ -38,6 +38,15 @@ public class QuestEvents
         }
     }
 
+    public event Action<Quest> AfterOnQuestStateChange;
+    public void AfterQuestStateChange(Quest quest)
+    {
+        if (AfterOnQuestStateChange != null)
+        {
+            AfterOnQuestStateChange(quest);
+        }
+    }
+
     public event Action<string, int, QuestStepState> onQuestStepStateChange;
     public void QuestStepStateChange(string id, int stepIndex, QuestStepState questStepState)
     {
@@ -46,4 +55,6 @@ public class QuestEvents
             onQuestStepStateChange(id, stepIndex, questStepState);
         }
     }
+
+
 }

@@ -12,6 +12,7 @@ public class InteractableNPC : InteractableObject
 
     [HideInInspector]
     public bool dialogueStatus;
+    
 
     void Start(){
         dialogueManager = GetComponent<DialogueManager>();
