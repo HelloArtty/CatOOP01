@@ -27,9 +27,7 @@ public class InteractableNPC : InteractableObject
             {
                 if (dialogueStatus == false)
                 {
-                    interactSymbol.SetActive(false);
-                    dialogueBubble.SetActive(true);
-                    dialogueManager.StartDialogue();
+                    StartCoroutine(DelayDialogue());
                 }
                 else
                 {
@@ -37,6 +35,14 @@ public class InteractableNPC : InteractableObject
                 }
             }
         }
+    }
+
+    // delay for some event that might come up before dialogue (deliver item window will pause the time and enable before dialogue start)
+    private IEnumerator DelayDialogue(){
+        yield return new WaitForSeconds(0.01f);
+        interactSymbol.SetActive(false);
+        dialogueBubble.SetActive(true);
+        dialogueManager.StartDialogue();
     }
 
     protected override void OnTriggerEnter2D(Collider2D collision)

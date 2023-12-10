@@ -11,7 +11,7 @@ public class Menu : MonoBehaviour
 
     void Start(){
         button.onClick.AddListener(OpenPauseMenu);
-        resume.onClick.AddListener(OpenPauseMenu);
+        resume.onClick.AddListener(ClickedResume);
     }
 
     // void Update(){

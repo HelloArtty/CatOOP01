@@ -10,7 +10,7 @@ using System;
 public class QuestPoint : MonoBehaviour
 {
     [Header("Quest")]
-    [SerializeField] private QuestInfoSO questInfoForPoint;
+    [SerializeField] public QuestInfoSO questInfoForPoint;
 
     [Header("Config")]
     [SerializeField] private bool startPoint = true;
@@ -52,6 +52,7 @@ public class QuestPoint : MonoBehaviour
         else if(currentQuestState.Equals(QuestState.CAN_FINISH) && finishPoint)
         {
             GameEventManager.instance.questEvents.FinishQuest(questID);
+            GetComponent<QuestItemDeliver>().DeliverItem();
         }
     }
 
@@ -72,7 +73,7 @@ public class QuestPoint : MonoBehaviour
         }
     }
 
-    
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Player"))

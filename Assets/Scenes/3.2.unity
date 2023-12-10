@@ -4052,8 +4052,8 @@ GameObject:
   - component: {fileID: 1866071698}
   - component: {fileID: 1866071700}
   - component: {fileID: 1866071699}
-  - component: {fileID: 1866071701}
   - component: {fileID: 1866071702}
+  - component: {fileID: 1866071701}
   m_Layer: 0
   m_Name: DeerQuest
   m_TagString: Untagged

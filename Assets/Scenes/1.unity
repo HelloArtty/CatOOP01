@@ -549,14 +549,7 @@ MonoBehaviour:
   isDialogueEnded: 0
   info: {fileID: 11400000, guid: c6fadb4d06d9abf4aa13a7367bfe1e98, type: 2}
   npcDialogueSentencesCanStart:
-  - Hey there! Welcome aboard as our newest postman.
-  - Your first task is to capture pictures of specific items on this list and deliver
-    them to the receiver's hands.
-  - You can check the list of tasks you need to complete at the top left corner of
-    your screen.
-  - Feel free to explore the area to locate the items, and don't forget to snap those
-    pictures before delivery!
-  - Good luck!
+  - Hi!
   npcDialogueSentencesInProgress: []
   npcDialogueSentencesCanFinish: []
   npcDialogueSentencesFinished:
@@ -1392,92 +1385,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!1 &1199805826
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1199805830}
-  - component: {fileID: 1199805829}
-  - component: {fileID: 1199805827}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1199805827
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1199805826}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3855bde23b8b494c93b9a3443169a93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  typingSpeed: 0.05
-  dialogueCloseSec: 4
-  dialogueBubble: {fileID: 77030707}
-  npcDialogueText: {fileID: 1227965841}
-  npcDialogueSentences:
-  - Hey
-  - hello
-  npcIndex: 0
-  dialogueLength: 0
-  isDialogueFinished: 0
-  isDialogueEnded: 0
---- !u!114 &1199805829
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1199805826}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 994dadfccd51de8468cc5cf6ebf1571c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  typingSpeed: 0.05
-  dialogueCloseSec: 4
-  dialogueBubble: {fileID: 77030707}
-  npcDialogueText: {fileID: 1227965841}
-  npcDialogueSentences: []
-  npcIndex: 0
-  dialogueLength: 0
-  isDialogueFinished: 0
-  isDialogueEnded: 0
-  info: {fileID: 11400000, guid: c6fadb4d06d9abf4aa13a7367bfe1e98, type: 2}
-  npcDialogueSentencesCanStart:
-  - Find Mochi For Me!
-  npcDialogueSentencesInProgress:
-  - Can't find? susu na
-  npcDialogueSentencesCanFinish:
-  - Go to deliver to black cat in the town!
-  npcDialogueSentencesFinished:
-  - Thankyou for playing!
---- !u!4 &1199805830
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1199805826}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.232069, y: -1.7969328, z: -8.932864}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1227965841 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6715470652484713594, guid: 1a24446e857894aa9a9cd731437a8961, type: 3}
@@ -1882,4 +1789,3 @@ SceneRoots:
   - {fileID: 134635575}
   - {fileID: 1147260569}
   - {fileID: 1896130559}
-  - {fileID: 1199805830}
