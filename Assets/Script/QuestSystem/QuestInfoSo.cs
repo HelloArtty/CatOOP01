@@ -16,9 +16,6 @@ public class QuestInfoSO : ScriptableObject
     [Header("Steps")]
     public GameObject[] questStepPrefabs;
 
-    // [Header("Rewards")]
-    // public GameObject changeSprite;
-
     // ensure the id is always the name of the Scriptable Object asset
     private void OnValidate()
     {

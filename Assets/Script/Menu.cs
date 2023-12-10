@@ -13,13 +13,7 @@ public class Menu : MonoBehaviour
         button.onClick.AddListener(OpenPauseMenu);
         resume.onClick.AddListener(ClickedResume);
     }
-
-    // void Update(){
-    //     if(Input.GetKeyDown(KeyCode.Escape)){
-    //         checkOpenCanvas();
-    //     }
-    // }
-
+    
     void OpenPauseMenu(){
         SetMenuStatus();
     }

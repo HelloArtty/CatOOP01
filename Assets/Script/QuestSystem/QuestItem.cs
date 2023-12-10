@@ -59,16 +59,6 @@ public class QuestItem : MonoBehaviour
         }
     }
 
-    // private void ShowAquireWindow(){
-    //     acquireWindow.SetActive(true);
-    // }
-
-    // private IEnumerator ShowAquireWindow(){
-    //     acquireWindow.SetActive(true);
-    //     yield return new WaitForSeconds(windowCloseSec);
-    //     acquireWindow.SetActive(false);
-    // }
-
     private IEnumerator ShowAquireWindow(float windowCloseSec){
         Time.timeScale = 0; // Pause the game
         acquireWindow.SetActive(true);

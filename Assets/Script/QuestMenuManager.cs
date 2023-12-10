@@ -13,10 +13,6 @@ public class QuestMenuManager : MonoBehaviour
     [SerializeField] private QuestInfoSO infoQuest2;
     [SerializeField] private GameObject questStatus2;
 
-    // [Header("Quest Budha")]
-    // [SerializeField] private QuestInfoSO infoQuest3;
-    // [SerializeField] private GameObject textQuest3;
-
     Dictionary<QuestInfoSO, TextMeshProUGUI> dict;
 
     private void Awake()
