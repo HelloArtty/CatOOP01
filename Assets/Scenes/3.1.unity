@@ -957,7 +957,7 @@ Transform:
   m_GameObject: {fileID: 372034250}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.6897388, y: -3.592203, z: -12}
+  m_LocalPosition: {x: 3.6982067, y: -3.6907742, z: -12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3226,6 +3226,93 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1433407034}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!1001 &1157582733
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1705432473798225424, guid: ef0c03caa890a8244aed9f49e3200edf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -11.077
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705432473798225424, guid: ef0c03caa890a8244aed9f49e3200edf, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.453
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705432473798225424, guid: ef0c03caa890a8244aed9f49e3200edf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.8848224
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705432473798225424, guid: ef0c03caa890a8244aed9f49e3200edf, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705432473798225424, guid: ef0c03caa890a8244aed9f49e3200edf, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705432473798225424, guid: ef0c03caa890a8244aed9f49e3200edf, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705432473798225424, guid: ef0c03caa890a8244aed9f49e3200edf, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705432473798225424, guid: ef0c03caa890a8244aed9f49e3200edf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705432473798225424, guid: ef0c03caa890a8244aed9f49e3200edf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705432473798225424, guid: ef0c03caa890a8244aed9f49e3200edf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2314607008304049429, guid: ef0c03caa890a8244aed9f49e3200edf, type: 3}
+      propertyPath: m_text
+      value: Nara park
+      objectReference: {fileID: 0}
+    - target: {fileID: 2393843581843626536, guid: ef0c03caa890a8244aed9f49e3200edf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2938669719688928945, guid: ef0c03caa890a8244aed9f49e3200edf, type: 3}
+      propertyPath: m_Name
+      value: Sign
+      objectReference: {fileID: 0}
+    - target: {fileID: 5292393386033340114, guid: ef0c03caa890a8244aed9f49e3200edf, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.00039672852
+      objectReference: {fileID: 0}
+    - target: {fileID: 5292393386033340114, guid: ef0c03caa890a8244aed9f49e3200edf, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1.699997
+      objectReference: {fileID: 0}
+    - target: {fileID: 8125959121999740946, guid: ef0c03caa890a8244aed9f49e3200edf, type: 3}
+      propertyPath: m_text
+      value: a large park located in the center of Nara with more than thousands
+        of friendly deer. It's a place where you can get up close with these gentle
+        creatures, explore ancient temples, and enjoy the tranquility of nature.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8125959121999740946, guid: ef0c03caa890a8244aed9f49e3200edf, type: 3}
+      propertyPath: m_fontSize
+      value: 4.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 8125959121999740946, guid: ef0c03caa890a8244aed9f49e3200edf, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 4.35
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ef0c03caa890a8244aed9f49e3200edf, type: 3}
 --- !u!1 &1166716500
 GameObject:
   m_ObjectHideFlags: 0
@@ -5936,3 +6023,4 @@ SceneRoots:
   - {fileID: 12711973}
   - {fileID: 1494797698}
   - {fileID: 24544920}
+  - {fileID: 1157582733}

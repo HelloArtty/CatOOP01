@@ -549,7 +549,14 @@ MonoBehaviour:
   isDialogueEnded: 0
   info: {fileID: 11400000, guid: c6fadb4d06d9abf4aa13a7367bfe1e98, type: 2}
   npcDialogueSentencesCanStart:
-  - Hi!
+  - Hey there! Welcome aboard as our newest postman
+  - Your first task is to capture pictures of specific items on this list and deliver
+    them to the receiver's hands
+  - You can check the list of tasks you need to complete at the top left corner of
+    your screen
+  - Feel free to explore the area to locate the items, and don't forget to snap those
+    pictures before delivery!
+  - Good Luck!
   npcDialogueSentencesInProgress: []
   npcDialogueSentencesCanFinish: []
   npcDialogueSentencesFinished:
