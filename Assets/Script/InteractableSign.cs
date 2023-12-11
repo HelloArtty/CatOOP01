@@ -8,19 +8,14 @@ public class InteractableSign : InteractableObject
     [SerializeField]
     private GameObject signWindowUI;
     private bool playerInCollider;
-    private bool signActive;
-
-    void Start(){
-        signActive = false;
-    }
 
     void Update(){
         if (Input.GetKeyDown(KeyCode.E) && playerInCollider == true){
-            if (signActive == false)
+            if (!signWindowUI.activeSelf)
             {
                 OpenWindow();
             }
-            else if(signActive == true)
+            else if(signWindowUI.activeSelf)
             {
                 ExitWindow();
             }
@@ -33,7 +28,7 @@ public class InteractableSign : InteractableObject
         {
             if (collision.CompareTag("Player"))
             {
-                interactSymbol.SetActive(true);
+                base.OnTriggerEnter2D(collision); // call this method in base class
                 playerInCollider = true;
             }
         }
@@ -44,7 +39,7 @@ public class InteractableSign : InteractableObject
         {
             if (collision.CompareTag("Player"))
             {
-                interactSymbol.SetActive(true);
+                base.OnTriggerStay2D(collision); // call this method in base class
             }
         }
     }
@@ -55,7 +50,7 @@ public class InteractableSign : InteractableObject
         {
             if (collision.CompareTag("Player"))
             {
-                interactSymbol.SetActive(false);
+                base.OnTriggerExit2D(collision); // call this method in base class
                 playerInCollider = false;
             }
         }
@@ -63,13 +58,11 @@ public class InteractableSign : InteractableObject
 
     void OpenWindow(){
         signWindowUI.SetActive(true);
-        signActive = true;
         Time.timeScale = 0f;
     }
 
     void ExitWindow(){
         signWindowUI.SetActive(false);
-        signActive = false;
         Time.timeScale = 1f;
     }
 }

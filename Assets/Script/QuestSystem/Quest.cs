@@ -44,7 +44,7 @@ public class Quest
         currentQuestStepIndex++;
     }
 
-    public bool CurrentStepExitst()
+    public bool CurrentStepExist()
     {
         return (currentQuestStepIndex < info.questStepPrefabs.Length);
     }
@@ -62,7 +62,7 @@ public class Quest
     private GameObject GetCurrenQuestStepPrefab()
     {
         GameObject questStepPrefab = null;
-        if(CurrentStepExitst())
+        if(CurrentStepExist())
         {
             questStepPrefab = info.questStepPrefabs[currentQuestStepIndex];
         }

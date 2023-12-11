@@ -97,7 +97,7 @@ public class QuestManager : MonoBehaviour
         quest.MoveToNextStep();
 
         // if there are more steps, instantiate the next one
-        if(quest.CurrentStepExitst())
+        if(quest.CurrentStepExist())
         {
             quest.InstantiateCurrentQuestStep(this.transform);
         }

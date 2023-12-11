@@ -52,13 +52,6 @@ public class DialogueQuestManager : DialogueManager
         } 
     }
 
-    protected override void EndDialogue(){
-        npcIndex = 0;
-        interactableNPC.dialogueStatus = false;
-        isDialogueEnded = true;
-        dialogueBubble.SetActive(false);
-    }
-
     public IEnumerator CheckIfReadyToStart()
     {
         while (true) // Infinite loop until the condition changes to false
@@ -67,20 +60,13 @@ public class DialogueQuestManager : DialogueManager
             {
                 yield return null; // Wait for the next frame
             }
-
             // Condition became true
-            // Debug.Log("Condition is true");
-
             while (interactableNPC.dialogueStatus) // Wait for the condition to become false
             {
                 yield return null; // Wait for the next frame
             }
-
             // Condition became false
-            // Debug.Log("Condition is false");
             break; // Exit the loop when the condition becomes false
         }
-
-        // Debug.Log("Exited loop");
     }
 }

@@ -37,10 +37,11 @@ public class InteractableNPC : InteractableObject
         }
     }
 
-    // delay for some event that might come up before dialogue (deliver item window will pause the time and enable before dialogue start)
+    // delay for some event that might come up before dialogue 
+    //(deliver item window will pause the time and enable before dialogue start)
     private IEnumerator DelayDialogue(){
         yield return new WaitForSeconds(0.01f);
-        interactSymbol.SetActive(false);
+        base.InactiveSymbol();
         dialogueBubble.SetActive(true);
         dialogueManager.StartDialogue();
     }
@@ -53,11 +54,11 @@ public class InteractableNPC : InteractableObject
             {
                 if(dialogueStatus == false)
                 {
-                    interactSymbol.SetActive(true);
+                    base.ActiveSymbol();
                 }
                 else
                 {
-                    interactSymbol.SetActive(false);
+                    base.InactiveSymbol();
                 }
                 playerInCollider = true;
             }
@@ -70,22 +71,21 @@ public class InteractableNPC : InteractableObject
             if (collision.CompareTag("Player"))
             {
                 if(dialogueManager.isDialogueEnded == true){
-                    interactSymbol.SetActive(true);
+                    base.ActiveSymbol();
                 }
                 else if(dialogueManager.isDialogueEnded == false){
-                    interactSymbol.SetActive(false);
+                    base.InactiveSymbol();
                 }
             }
         }
     }
 
-    protected override void OnTriggerExit2D(Collider2D collision)
-    {
+    protected override void OnTriggerExit2D(Collider2D collision){
         if(collision != null)
         {
             if (collision.CompareTag("Player"))
             {
-                interactSymbol.SetActive(false);
+                base.OnTriggerExit2D(collision);
                 playerInCollider = false;
             }
         }

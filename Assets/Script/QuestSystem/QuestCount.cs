@@ -22,6 +22,10 @@ public class QuestCount : MonoBehaviour
         GameEventManager.instance.questEvents.onFinishQuest += IncrementQuestCount;
     }
 
+    private void OnDisable(){
+        GameEventManager.instance.questEvents.onFinishQuest -= IncrementQuestCount;
+    }
+
     private void IncrementQuestCount(String id){
         questCount++;
         SaveQuestCount();

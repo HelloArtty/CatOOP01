@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class InteractableObject : CollidableObject
 {
-
     [SerializeField] protected GameObject interactSymbol;
 
     protected override void OnTriggerEnter2D(Collider2D collision)
@@ -13,7 +12,7 @@ public class InteractableObject : CollidableObject
         {
             if (collision.CompareTag("Player"))
             {
-                interactSymbol.SetActive(true);
+                ActiveSymbol();
             }
         }
         
@@ -24,7 +23,7 @@ public class InteractableObject : CollidableObject
         {
             if (collision.CompareTag("Player"))
             {
-                interactSymbol.SetActive(true);
+                ActiveSymbol();
             }
         }
     }
@@ -35,8 +34,16 @@ public class InteractableObject : CollidableObject
         {
             if (collision.CompareTag("Player"))
             {
-                interactSymbol.SetActive(false);
+                InactiveSymbol();
             }
         }
+    }
+
+    protected void ActiveSymbol(){
+        interactSymbol.SetActive(true);
+    }
+
+    protected void InactiveSymbol(){
+        interactSymbol.SetActive(false);
     }
 }
