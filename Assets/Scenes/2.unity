@@ -3881,7 +3881,7 @@ GameObject:
   - component: {fileID: 1631664423}
   - component: {fileID: 1631664428}
   m_Layer: 0
-  m_Name: MoneyQuest
+  m_Name: MonkeyQuest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3917,7 +3917,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 994dadfccd51de8468cc5cf6ebf1571c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typingSpeed: 0.05
+  typingSpeed: 0.03
   dialogueCloseSec: 3
   dialogueBubble: {fileID: 833533168}
   npcDialogueText: {fileID: 833533167}
@@ -5886,9 +5886,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2393843581843626536, guid: ef0c03caa890a8244aed9f49e3200edf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2938669719688928945, guid: ef0c03caa890a8244aed9f49e3200edf, type: 3}
       propertyPath: m_Name
       value: Sign
+      objectReference: {fileID: 0}
+    - target: {fileID: 8125959121999740946, guid: ef0c03caa890a8244aed9f49e3200edf, type: 3}
+      propertyPath: m_text
+      value: "    A traditional Japanese style community mall in front of Todai-ji
+        Temple. There are many stores such as cafes, restaurants, souvenir stores,
+        and traditional craft stores. The highlights are \"Daibutsu Pudding\" made
+        with generous Yamato tea packed in buddha face painted on the cap\u2019s
+        bottle, \"Kakinoha-zushi\" (sushi) made with vinegared rice topped with sea
+        bream or salmon and wrapped in persimmon leaves, sweets made with Yoshino
+        kuzu, local vegetables, linen bags, book covers, and more which most of them
+        are Nara\u2019s specialties.\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8125959121999740946, guid: ef0c03caa890a8244aed9f49e3200edf, type: 3}
+      propertyPath: m_fontSize
+      value: 3.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8125959121999740946, guid: ef0c03caa890a8244aed9f49e3200edf, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 3.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8125959121999740946, guid: ef0c03caa890a8244aed9f49e3200edf, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

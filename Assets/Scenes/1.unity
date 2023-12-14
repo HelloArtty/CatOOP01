@@ -538,7 +538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba7aad33ed62eeb4aa3854a446357ff5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typingSpeed: 0.05
+  typingSpeed: 0.03
   dialogueCloseSec: 4
   dialogueBubble: {fileID: 77030707}
   npcDialogueText: {fileID: 1227965841}

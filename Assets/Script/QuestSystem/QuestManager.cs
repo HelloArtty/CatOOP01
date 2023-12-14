@@ -55,7 +55,7 @@ public class QuestManager : MonoBehaviour
         Quest quest = GetQuestByID(id);
         quest.state = state;
         GameEventManager.instance.questEvents.QuestStateChange(quest);
-        Debug.Log("Change State for quest: " + quest.info.id + " State: " + quest.state);
+        // Debug.Log("Change State for quest: " + quest.info.id + " State: " + quest.state);
     }
 
     private bool CheckRequirementsMet(Quest quest)
