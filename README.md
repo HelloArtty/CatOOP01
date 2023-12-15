@@ -5,8 +5,6 @@
 * [Features](#Features)
 * [Technologies Used](#Technologies-Used)
 * [How to Play](#How-To-Play)
-	* [Install](#Install)
-	* [How To Play Game](#How-To-Play-Game)
 * [ Examples](#Examples)
 	* [Start](#Start)
 	* [Interact with NPC](Interact-with-NPC)
@@ -32,7 +30,7 @@ Post Meow is a simple object-oriented programming (OOP) project focused on model
  - Visual Studio 
 
 ## How To Play
- - **Install**
+ -  Install
 	 1. Clone the repository: `git clone https://github.com/HelloArtty/DemoCatOOP.git`
 	2. Open to folder  : `cd DemoCatOOP`
 	3. Run file **CatOOP01**
